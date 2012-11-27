@@ -56,6 +56,14 @@ register_setting(
 )
 
 register_setting(
+    name="BLOG_MAX_POST_PER_PAGE",
+    label=_("Max blog posts per page"),
+    description=_("Maximum number of blog posts shown on a blog listing page."),
+    editable=True,
+    default=20,
+)
+
+register_setting(
     name="BLOG_SLUG",
     description=_("Slug of the page object for the blog."),
     editable=False,

@@ -79,8 +79,16 @@ def blog_post_list(request, tag=None, year=None, month=None, username=None,
             setattr(blog_posts[i], "_categories", categories[post.id])
             setattr(blog_posts[i], "_keywords", keywords[post.id])
 
+    try:
+        blog_post_per_page = int(request.GET.get("count", settings.BLOG_POST_PER_PAGE))
+    except ValueError:
+        blog_post_per_page = settings.BLOG_POST_PER_PAGE
+
+    if not 1 <= blog_post_per_page <= settings.BLOG_MAX_POST_PER_PAGE:
+        blog_post_per_page = settings.BLOG_POST_PER_PAGE
+
     blog_posts = paginate(blog_posts, request.GET.get("page", 1),
-                          settings.BLOG_POST_PER_PAGE,
+                          blog_post_per_page,
                           settings.MAX_PAGING_LINKS)
     context = {"blog_posts": blog_posts, "year": year, "month": month,
                "tag": tag, "category": category, "author": author}
