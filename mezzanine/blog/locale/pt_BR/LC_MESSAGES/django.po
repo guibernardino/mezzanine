@@ -40,23 +40,23 @@ msgstr "Imagem de Destaque"
 
 #: models.py:31
 msgid "Blog post"
-msgstr "Post do blog"
+msgstr "Notícia"
 
 #: models.py:32
 msgid "Blog posts"
-msgstr "Posts do blog"
+msgstr "Notícias"
 
 #: models.py:54
 msgid "Blog Category"
-msgstr "Categoria do Blog"
+msgstr "Categoria de Notícia"
 
 #: models.py:55
 msgid "Blog Categories"
-msgstr "Categorias do Blog"
+msgstr "Categorias de Notícia"
 
 #: templates/admin/includes/quick_blog.html:18
 msgid "Quick Blog"
-msgstr "Blog Rápido"
+msgstr "Notícia Rápida"
 
 #: templates/admin/includes/quick_blog.html:27
 msgid "Save Draft"
@@ -96,7 +96,7 @@ msgstr "Compartilhe no Facebook"
 
 #: templates/blog/blog_post_list.html:4 templates/blog/blog_post_list.html:24
 msgid "Blog"
-msgstr "Blog"
+msgstr "Notícia"
 
 #: templates/blog/blog_post_list.html:33
 msgid "Tag:"
