@@ -49,7 +49,6 @@ $(function() {
 
     // Set the value of the _order fields on submit.
     $('input[type=submit]').click(function() {
-        console.log('clicked');
         $.each($(parentSelector), function(i, parent) {
             var order = 0;
             $.each($(parent).find('._order input'), function(i, field) {
